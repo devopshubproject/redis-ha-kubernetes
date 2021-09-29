@@ -1,0 +1,8 @@
+deploy:
+  - kubectl create -n redis
+  - kubectl create -f redis-configmap.yml -n redis
+  - kubectl create -f redis-pv.yml -n redis
+  - kubectl create -f redis-pvc.yml -n redis
+  - kubectl create -f redis-statefulset.yml -n redis
+  - kubectl create -f redis-svc.yml -n redis
+ 
